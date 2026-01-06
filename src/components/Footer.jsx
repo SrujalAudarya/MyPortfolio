@@ -26,8 +26,8 @@ const Footer = () => {
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>© {currentYear} Srujal Audarya</span>
             <span className="text-border">|</span>
-            <span className="flex items-center gap-1">
-              Built with <Heart size={14} className="text-red-500" /> using React
+            <span className="flex items-center gap-1.5">
+              Built with <Heart size={16} className="text-red-500" />
             </span>
           </div>
 

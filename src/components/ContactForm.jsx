@@ -25,17 +25,17 @@ const ContactForm = () => {
     setIsLoading(true);
 
     try {
-      // Replace these with your EmailJS credentials
+
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
-          to_name: "Srujal Audarya",
+          to_name: import.meta.env.VITE_EMAILJS_TO_NAME,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       toast({

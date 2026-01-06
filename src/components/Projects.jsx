@@ -15,11 +15,6 @@ const featuredProjects = [
     description: "An Android app to read PDF files from local storage.",
     techStack: ["Android", "Java", "PDFView"],
   },
-  {
-    title: "Quiz Admin Panel",
-    description: "Admin panel to manage quiz questions dynamically.",
-    techStack: ["Android", "Firebase", "Imgur API"],
-  },
 ];
 
 const Projects = () => {
@@ -34,7 +29,7 @@ const Projects = () => {
           subtitle="Some of my recent work"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
           {featuredProjects.map((project) => (
             <GlassCard key={project.title} className="text-center">
               <h3 className="text-lg font-mono font-bold text-foreground mb-2">

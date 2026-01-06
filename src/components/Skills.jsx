@@ -12,7 +12,7 @@ const skillCategories = [
   },
   {
     title: "Mobile",
-    skills: ["Android (Java)", "Android (Kotlin)", "Material Design"],
+    skills: ["Android (Java)", "Material Design"],
   },
   {
     title: "Backend & Tools",

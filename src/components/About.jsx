@@ -40,17 +40,18 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <GlassCard className="mb-12">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              I am <span className="text-foreground font-semibold">Srujal Audarya</span>, 
+              I am <span className="text-foreground font-semibold">Srujal Audarya</span>,
               a passionate Computer Science and Engineering student from{" "}
-              <span className="text-primary">SSGMCE, Shegaon</span>. I specialize in 
+              <span className="text-primary">SSGMCE, Shegaon</span>. I specialize in
               Android and Web development and enjoy building real-world applications.
             </p>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-4">
-              I have experience working with <span className="text-foreground">Firebase</span> and{" "}
-              <span className="text-foreground">React</span>. I am currently learning{" "}
-              <span className="text-foreground">JSP (Java Server Pages)</span> and constantly 
-              exploring new technologies to improve my skills and create innovative solutions.
+              I have gained hands-on exposure to <span className="text-foreground">Firebase</span> and
+              have studied <span className="text-foreground">React</span> as part of my development
+              journey. I am currently learning <span className="text-foreground">JSP (Java Server Pages)</span>
+              and enjoy exploring new technologies to improve my technical knowledge.
             </p>
+
           </GlassCard>
 
           {/* Highlights Grid */}
@@ -60,7 +61,7 @@ const About = () => {
                 key={item.title}
                 className="text-center group"
               >
-                <div 
+                <div
                   className="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 border border-neon-blue/30 group-hover:border-neon-blue/60 transition-all duration-300"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >

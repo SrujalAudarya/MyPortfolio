@@ -13,6 +13,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>Srujal Audarya</title>
+        <link rel="icon" href="favicon.svg" />
         <meta
           name="description"
           content="I am Srujal Audarya, a Computer Science Engineering student specializing in Android and Web development. Explore my portfolio showcasing projects built with React and Firebase."
