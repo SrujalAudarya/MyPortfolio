@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Srujal Audarya | Android & Web Developer</title>
+        <title>Srujal Audarya</title>
         <meta
           name="description"
           content="I am Srujal Audarya, a Computer Science Engineering student specializing in Android and Web development. Explore my portfolio showcasing projects built with React and Firebase."

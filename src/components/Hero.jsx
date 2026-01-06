@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg animate-fade-in-up flex-shrink-0" style={{
             animationDelay: "0.1s"
           }}>
-              <img alt="Srujal Audarya" className="w-full h-full object-cover" src="/lovable-uploads/11edd7bd-379e-4965-9053-6500a6cb067c.png" />
+              <img alt="Srujal Audarya" className="w-full h-full object-cover" src="/profile/mypic.png" />
             </div>
 
             {/* Text Content */}
