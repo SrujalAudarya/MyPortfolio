@@ -24,10 +24,11 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>© {currentYear} Srujal Audarya</span>
+            <span>© Srujal Audarya</span>
             <span className="text-border">|</span>
             <span className="flex items-center gap-1.5">
               Built with <Heart size={16} className="text-red-500" />
+              by Srujal
             </span>
           </div>
 
