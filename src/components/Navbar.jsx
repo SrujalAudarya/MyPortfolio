@@ -30,11 +30,10 @@ const Navbar = () => {
     <>
       {/* NAVBAR */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "py-3 glass-card rounded-none border-x-0 border-t-0"
-            : "py-5 bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "py-3 glass-card rounded-none border-x-0 border-t-0"
+          : "py-5 bg-transparent"
+          }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -61,11 +60,22 @@ const Navbar = () => {
             </div>
 
             {/* CTA */}
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center gap-3">
               <Button variant="neon" size="sm" asChild>
+                <a
+                  href="/Srujal_Audarya_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
+              </Button>
+
+              <Button variant="heroOutline" size="sm" asChild>
                 <a href="#contact">Get In Touch</a>
               </Button>
             </div>
+
 
             {/* Mobile Toggle */}
             <button
@@ -80,9 +90,8 @@ const Navbar = () => {
 
       {/* MOBILE SIDEBAR */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         {/* Overlay */}
         <div
@@ -92,11 +101,10 @@ const Navbar = () => {
 
         {/* Sidebar */}
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-background shadow-xl transform transition-transform duration-300 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 h-full w-72 bg-background shadow-xl transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
-          <div className="pt-20 px-6 flex flex-col gap-4">
+          <div className="pt-20 px-6 flex flex-col gap-4 items-stretch">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -109,10 +117,22 @@ const Navbar = () => {
             ))}
 
             <Button variant="neon" size="sm" asChild className="mt-6">
+              <a
+                href="/Srujal_Audarya_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
+                Download CV
+              </a>
+            </Button>
+
+            <Button variant="heroOutline" size="sm" asChild className="mt-3">
               <a href="#contact" onClick={() => setIsOpen(false)}>
                 Get In Touch
               </a>
             </Button>
+
           </div>
         </div>
       </div>
