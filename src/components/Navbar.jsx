@@ -132,7 +132,7 @@ const Navbar = () => {
             </Button>
 
             <Button variant="heroOutline" size="sm" asChild className="mt-3">
-              <a href="#contact" onClick={() => setIsOpen(false)}>
+              <a href="/contact" onClick={() => setIsOpen(false)}>
                 Get In Touch
               </a>
             </Button>
