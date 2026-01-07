@@ -1,10 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import SectionTitle from "@/components/SectionTitle";
 
 const projects = [
   {
@@ -47,67 +44,48 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <>
+    <Layout>
       <Helmet>
         <title>Projects | Srujal Audarya</title>
         <meta
           name="description"
           content="Explore my portfolio of Android and Web development projects including WhatsApp Clone, PDF Reader, Quiz Admin Panel, and more."
         />
-        <link rel="canonical" href="https://srujalaudarya.dev/projects" />
+        <link rel="canonical" href="https://srujal-portfolio.vercel.app//projects" />
       </Helmet>
 
-      <main className="relative min-h-screen bg-background">
-        <Navbar />
+      <section className="relative py-12 md:py-12 pt-16">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
 
-        <section className="relative py-20 md:py-32 pt-32">
-          {/* Background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
+        <div className="section-container relative z-10">
+          <SectionTitle
+            title="My Projects"
+            subtitle="A collection of my work showcasing Android and Web development skills"
+          />
 
-          <div className="section-container relative z-10">
-            {/* Back Button */}
-            <Button variant="ghost" size="sm" asChild className="mb-8">
-              <Link to="/" className="inline-flex items-center gap-2">
-                <ArrowLeft size={16} />
-                Back to Home
-              </Link>
-            </Button>
-
-            {/* Header */}
-            <div className="text-center mb-12">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-mono text-foreground mb-4">
-                My Projects
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                A collection of my work showcasing Android and Web development skills
-              </p>
-            </div>
-
-            {/* Projects Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
-              {projects.map((project) => (
-                <ProjectCard key={project.title} {...project} />
-              ))}
-            </div>
-
-            {/* GitHub CTA */}
-            <div className="mt-12 text-center">
-              <a
-                href="https://github.com/SrujalAudarya"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 font-mono"
-              >
-                <span>View more projects on GitHub</span>
-                <span className="text-xl">→</span>
-              </a>
-            </div>
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
           </div>
-        </section>
 
-        <Footer />
-      </main>
-    </>
+          {/* GitHub CTA */}
+          <div className="mt-12 text-center">
+            <a
+              href="https://github.com/SrujalAudarya"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 font-mono"
+            >
+              <span>View more projects on GitHub</span>
+              <span className="text-xl">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 };
 
